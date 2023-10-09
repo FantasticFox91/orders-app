@@ -1,19 +1,22 @@
 // Colors
 // ---------------------------------
 
-:root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-}
-
 // Default
 
-$color-default-black: #000000;
-$color-default-white: #ffffff;
-$color-transparent: rgba(255, 255, 255, 0);
+$color-default-black:                   #000000;
+$color-default-white:                   #ffffff;
+$color-transparent:                     rgba(255, 255, 255, 0);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-main:                            #ff8049;
+$color-main-hover:                      #cc663a;
+$color-secondary:                       #165996;
+$color-black-opacity-3:                 rgba(0, 0, 0, 0.3);
+$color-snow:                            #fafafa;
+$color-gray-light:                      #cacaca;
+$color-valencia:                        #d74545;
 
 // Gradient
 

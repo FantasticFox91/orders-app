@@ -27,8 +27,8 @@ const defaultUser = {
 export const useAuthStore = defineStore('auth', {
   state: (): AuthState => {
     return {
-      isAuth: localStorage.getItem('isAuth') ? JSON.parse(localStorage.getItem('isAuth')) : false,
-      user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : defaultUser,
+      isAuth: localStorage.getItem('isAuth') !== null ? JSON.parse(localStorage.getItem('isAuth')!) : false,
+      user: localStorage.getItem('user') !== null ? JSON.parse(localStorage.getItem('user')!) : defaultUser,
     }
   },
   actions: {

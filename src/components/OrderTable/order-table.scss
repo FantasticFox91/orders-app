@@ -1,3 +1,5 @@
+@import '@/assets/scss/variables.scss';
+
 .table {
   overflow: auto;
 
@@ -26,7 +28,7 @@
   margin: 0;
   padding: 16px 10px;
   text-align: center;
-  border: 1px solid #000000;
+  border: 1px solid $color-default-black;
 
   &--sort {
     display: flex;
@@ -41,6 +43,8 @@
 
 .table__buttons {
   position: absolute;
+  display: flex;
+  gap: 15px;
   top: calc(50% - 22px);
   left: calc(100% + 5px);
 }
@@ -62,12 +66,7 @@
 }
 
 .table__row--completed .table__cell {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.table__buttons {
-  display: flex;
-  gap: 15px;
+  color: $color-black-opacity-3;
 }
 
 .table__sort {
@@ -78,7 +77,7 @@
 }
 
 .table__icon--active path {
-  fill: #ff8049;
+  fill: $color-main;
 }
 
 .list-move,

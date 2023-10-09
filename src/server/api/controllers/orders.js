@@ -1,5 +1,10 @@
 let { orders } = require('../data.js')
-const { v4: uuidv4 } = require('uuid')
+
+// Функция для генерации уникального айди, можно заменить на библиотеку при необходимости
+const generateUniqueID = (existingIDs) => {
+  const lastOrderNumber = Math.max(...existingIDs);
+  return isFinite(lastOrderNumber) ? lastOrderNumber + 1 : 1;
+};
 
 const getOrders = (req, res) => {
   res.status(200).json({ success: true, data: orders })
@@ -37,21 +42,20 @@ const deleteOrder = (req, res) => {
 }
 
 const addOrder = (req, res) => {
-  const uniqueId = uuidv4()
-  const { userName, address, comment } = req.body
+  const { userName, address, comment } = req.body;
 
   const newOrder = {
-    id: uniqueId,
+    id: generateUniqueID(orders.map(order => order.id)),
     name: userName,
-    address: address,
-    comment: comment,
+    address,
+    comment,
     date: new Date(),
     status: 'Новый'
-  }
+  };
 
-  orders = [...orders, newOrder]
+  orders.push(newOrder);
 
-  res.status(201).send({ success: true, data: orders })
-}
+  res.status(201).send({ success: true, data: orders });
+};
 
 module.exports = { getOrders, updateOrder, deleteOrder, addOrder }

@@ -5,8 +5,7 @@
 
   font-display: swap;
   src:
-    url('/fonts/PTSans-Regular.woff2') format('woff2'),
-    url('/fonts/PTSans-Regular.woff2') format('woff');
+    url('@/assets/fonts/PTSans-Regular.woff2') format('woff2'),
 }
 
 @font-face {
@@ -16,6 +15,5 @@
 
   font-display: swap;
   src:
-    url('/fonts/PTSans-Bold.woff2') format('woff2'),
-    url('/fonts/PTSans-Bold.woff2') format('woff');
+    url('@/assets/fonts/PTSans-Bold.woff2') format('woff2'),
 }

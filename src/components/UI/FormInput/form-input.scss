@@ -1,3 +1,5 @@
+@import '@/assets/scss/variables.scss';
+
 .form-input {
   position: relative;
   display: flex;
@@ -12,7 +14,7 @@
 .form-input__input {
   padding: 10px;
   font-size: 14px;
-  background-color: #fafafa;
+  background-color: $color-snow;
   border: none;
   border-radius: 8px;
 
@@ -21,7 +23,7 @@
   }
 
   &:disabled {
-    background-color: #cacaca;
+    background-color: $color-gray-light;
   }
 }
 
@@ -43,5 +45,5 @@
 }
 
 .form-input__star {
-  color: #d74545;
+  color: $color-valencia;
 }

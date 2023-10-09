@@ -1,3 +1,6 @@
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/mixins.scss';
+
 .user {
   display: flex;
   align-items: center;
@@ -16,14 +19,12 @@
   padding: 5px;
   border: none;
   border-radius: 8px;
-  background-color: #ff8049;
-  color: #ffffff;
+  background-color: $color-main;
+  color: $color-default-white;
   cursor: pointer;
   transition: background-color 0.3s;
 
-  @media (hover: hover) {
-    &:hover {
-      background-color: #cc663a;
-    }
+  @include hover {
+    background-color: $color-main-hover;
   }
 }

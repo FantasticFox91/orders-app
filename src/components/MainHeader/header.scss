@@ -1,8 +1,10 @@
+@import '@/assets/scss/variables.scss';
+
 .header {
   margin-bottom: 40px;
   padding: 10px 0;
-  background-color: #165996;
-  color: #ffffff;
+  background-color: $color-secondary;
+  color: $color-default-white;
 }
 
 .header__container {

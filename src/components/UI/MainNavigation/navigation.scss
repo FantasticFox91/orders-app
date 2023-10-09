@@ -1,3 +1,6 @@
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/mixins.scss';
+
 .navigation__list {
   display: flex;
   margin: 0;
@@ -9,7 +12,7 @@
 .navigation__link {
   position: relative;
   padding-bottom: 10px;
-  color: #ffffff;
+  color: $color-default-white;
   transition: color 0.3s;
 
   &::after {
@@ -20,14 +23,14 @@
     bottom: 0;
     left: 0;
   }
-
-  @media (hover: hover) {
-    &:hover:not(.navigation__link--active) {
-      color: #cc663a;
+  
+  &:not(.navigation__link--active) {
+    @include hover {
+      color: $color-main-hover;
     }
   }
 }
 
 .navigation__link--active::after {
-  background-color: #ff8049;
+  background-color: $color-main;
 }

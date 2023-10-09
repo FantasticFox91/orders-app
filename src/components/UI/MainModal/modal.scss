@@ -1,3 +1,5 @@
+@import '@/assets/scss/variables.scss';
+
 .modal {
   position: absolute;
   top: 0;
@@ -7,12 +9,12 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: $color-black-opacity-3;
 }
 
 .modal__container {
   padding: 15px;
-  background-color: #ffffff;
+  background-color: $color-default-white;
   border-radius: 10px;
 }
 
@@ -44,8 +46,8 @@
 }
 .modal__loader {
   display: inline-block;
-  border: 4px solid #ffffff;
-  border-left-color: #ff8049;
+  border: 4px solid $color-default-white;
+  border-left-color: $color-main;
   border-radius: 50%;
   width: 50px;
   height: 50px;
