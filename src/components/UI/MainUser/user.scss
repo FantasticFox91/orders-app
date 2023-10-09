@@ -1,0 +1,29 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user__name {
+  display: none;
+
+  @media (min-width: 744px) {
+    display: block;
+  }
+}
+
+.user__logout {
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff8049;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #cc663a;
+    }
+  }
+}

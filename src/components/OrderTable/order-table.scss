@@ -1,0 +1,98 @@
+.table {
+  overflow: auto;
+
+  @media (min-width: 1450px) {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+}
+
+.table__container {
+  width: 1064px;
+  position: relative;
+}
+
+.table__headings,
+.table__row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.table__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 16px 10px;
+  text-align: center;
+  border: 1px solid #000000;
+
+  &--sort {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+  }
+}
+
+.table__row {
+  position: relative;
+}
+
+.table__buttons {
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(100% + 5px);
+}
+
+.table__row:first-of-type .table__cell {
+  border-top: none;
+}
+
+.table__row .table__cell:not(:last-of-type) {
+  border-right: none;
+}
+
+.table__headings .table__cell:not(:last-of-type) {
+  border-right: none;
+}
+
+.table__row .table__cell {
+  border-top: none;
+}
+
+.table__row--completed .table__cell {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.table__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.table__sort {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.table__icon--active path {
+  fill: #ff8049;
+}
+
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(0px);
+}
+
+.list-leave-active {
+  position: absolute;
+}

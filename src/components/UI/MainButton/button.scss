@@ -1,0 +1,20 @@
+.button {
+  margin: 0;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #ff8049;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #cc663a;
+    }
+  }
+}
+
+.button:disabled {
+  opacity: 0.5;
+}

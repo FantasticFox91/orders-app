@@ -1,0 +1,47 @@
+.form-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input__label {
+  cursor: pointer;
+}
+
+.form-input__input {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 8px;
+
+  &--password {
+    padding-right: 35px;
+  }
+
+  &:disabled {
+    background-color: #cacaca;
+  }
+}
+
+.form-input__password-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 6px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent url('@/assets/svg/password-hide.svg') 50% 50% no-repeat;
+  cursor: pointer;
+
+  &--show {
+    background-image: url('@/assets/svg/password-show.svg');
+  }
+}
+
+.form-input__star {
+  color: #d74545;
+}
